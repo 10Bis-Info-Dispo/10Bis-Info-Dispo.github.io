@@ -20,13 +20,14 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 		}
-
+/*		General styling to all popover items*/
 		.popover_item{
 			color:transparent;
 			background-color: transparent;
 			display: inline-block;
 			border: none;
 
+/*		Refresh button*/
 		}
 		.refresh{
 			height:5vh;
@@ -34,6 +35,31 @@
 			position: absolute;
 			left:9vw;
 			top:0px;
+		}
+/*		Dispo button settings*/
+		.dispo{
+			height:5vh;
+			width:7vw;
+			position: absolute;
+			left:1vw;
+			top:0px;
+		}
+
+		.city-selector{
+			height:5vh;
+			width:3.5vw;
+			position: absolute;
+			left:11vw;
+			top:0px;
+		}
+
+		.city-name{
+			height:5vh;
+			width:5vw;
+			position: absolute;
+			left:17vw;
+			top:0px;
+			border:1px solid black;
 		}
 	</style>
 	<!-- FONT AWESOME -->
@@ -45,16 +71,25 @@
 	 <!-- end of Bootstrap js -->
 
 	<div class="container">
+		<!-- Dispo button -->
+		<button type="button" class="dispo popover_item" data-bs-toggle="popover" data-placement="bottom" data-bs-title=" כפתור הדיספו" data-bs-content="כפתור זה יחזיר אותנו לעמוד הבית של הדיספו יעני ברלין"></button>
+		<!-- Dispo button -->
+
 		<!-- refresh-->
 		<button type="button" class="refresh popover_item" data-bs-toggle="popover" data-bs-title="כפתור רענון" data-bs-content="בליחצה על כפתור זה, יבוצע רענון של נתוני העיר ומיקומי השליחים ברחבי העיר."></button>
-		<!-- <div class="refresh">
-		</div>
-		<div class="refresh-info">
-			<i class="fa-sharp fa-solid fa-arrow-up"></i>
-			<p>this is info</p>
-		</div> -->
+		<!-- refresh end -->
 
 		<!--city selector-->
+		<button type="button" class="city-selector popover_item" data-bs-toggle="popover" data-placement="bottom" data-bs-title="בחירת עיר" data-bs-content="בחירת עיר באופן ידני על ידי רשימה שתופיע המסודרת לפי מדינות."></button>
+		<!-- end of city selector -->
+
+		<!-- City name -->
+		<button type="button" class="city-name popover_item" data-bs-toggle="popover" data-placement="bottom" data-bs-title="בחירת עיר לפי שם" data-bs-content="כאשר נרשום כאן את שם העיר המבוקשת היא תופיע ונוכל לבחור בה והדיספו יעבור בהתאם אליה."></button>
+
+		<!-- template -->
+		<!-- <button type="button" class="dispo popover_item" data-bs-toggle="popover" data-placement="bottom" data-bs-title="" data-bs-content=""></button> -->
+
+
 	</div>
 	<!-- Enabling Bootstrap Popover -->
 	<script>
