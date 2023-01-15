@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<!-- END OF Bootstrap CSS -->
+	<style>
+		body{
+			height: 100vh;
+			width: 100vw;
+			margin:0;
+		}
+		.container{
+			height:100%;
+			width:100%;
+			margin:0;
+			background-image: url("https://i.ibb.co/NFDLFq4/image.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		.popover_item{
+			color:transparent;
+			background-color: transparent;
+			display: inline-block;
+			border: none;
+
+		}
+		.refresh{
+			height:5vh;
+			width:2vw;
+			position: absolute;
+			left:9vw;
+			top:0px;
+		}
+	</style>
+	<!-- FONT AWESOME -->
+	<script src="https://kit.fontawesome.com/bf0597c63e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!-- 	Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	 <!-- end of Bootstrap js -->
+
+	<div class="container">
+		<!-- refresh-->
+		<button type="button" class="refresh popover_item" data-bs-toggle="popover" data-bs-title="כפתור רענון" data-bs-content="בליחצה על כפתור זה, יבוצע רענון של נתוני העיר ומיקומי השליחים ברחבי העיר."></button>
+		<!-- <div class="refresh">
+		</div>
+		<div class="refresh-info">
+			<i class="fa-sharp fa-solid fa-arrow-up"></i>
+			<p>this is info</p>
+		</div> -->
+
+		<!--city selector-->
+	</div>
+	<!-- Enabling Bootstrap Popover -->
+	<script>
+		const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+		const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+	</script>
+</body>
+</html>
